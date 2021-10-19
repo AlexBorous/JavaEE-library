@@ -1,0 +1,10 @@
+<persistence-unit name="default" transaction-type="RESOURCE_LOCAL">
+  <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+  <!-- Enables auto discovery of persistent classes, -->
+  <!-- otherwise they must be listed using <class>  -->
+  <exclude-unlisted-classes>false</exclude-unlisted-classes>
+ 
+  <properties>
+    ...
+  </properties>
+</persistence-unit>
