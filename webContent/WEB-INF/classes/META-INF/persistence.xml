@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<persistence version="2.0"
+	xmlns="http://java.sun.com/xml/ns/persistence"
+	xmlns:xsi="http://java.sun.com/xml/ns/persistence/persistence_2.0.xsd">
+
+	<persistence-unit name="mysqlPU"
+		transaction-type="JTA">
+
+		<provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+		<jta-data-source>java:jboss/datasources/MySqlDS</jta-data-source>
+
+		<exclude-unlisted-classes>false</exclude-unlisted-classes>
+
+		<properties>
+
+			<property name="eclipselink.logging.level" value="INFO" />
+
+		</properties>
+	<class>com.alex.library.model.AppUser</class>
+	<class>com.alex.library.model.Review</class>
+	<class>com.alex.library.model.AppUserCategory</class>
+	<class>com.alex.library.model.Book</class>
+	<class>com.alex.library.model.BookCategory</class>
+	<class>com.alex.library.model.Category</class>
+	<class>com.alex.library.model.UserAction</class>
+	</persistence-unit>
+
+</persistence>
